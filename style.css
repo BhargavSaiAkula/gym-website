@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    color: white;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    animation: fadeDown 1s ease;
+}
+
+header h1 {
+    font-size: 38px;
+    font-weight: bold;
+    background: linear-gradient(
+        90deg,
+        #ff0000,
+        #ff9900,
+        #ffee00,
+        #00ffcc,
+        #0066ff,
+        #cc00ff,
+        #ff0000
+    );
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 6s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% }
+    100% { background-position: 400% }
+}
+
+header p {
+    margin-top: 10px;
+    color: #ddd;
+}
+
+/* WORKOUT FLEX CONTAINER */
+.workout-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 30px;
+}
+
+/* CARD DESIGN */
+.card {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.card i {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+/* DIFFERENT COLORS */
+.chest {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+}
+
+.back {
+    background: linear-gradient(45deg, #1d976c, #93f9b9);
+}
+
+.arms {
+    background: linear-gradient(45deg, #4568dc, #b06ab3);
+}
+
+.abs {
+    background: linear-gradient(45deg, #ff9966, #ff5e62);
+}
+
+.shoulders {
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+}
+
+.legs {
+    background: linear-gradient(45deg, #f7971e, #ffd200);
+}
+.cardio {
+    background: linear-gradient(45deg, #ff0000, #ff512f, #ff9966);
+}
+/* HOVER EFFECT */
+.card:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background: rgba(0,0,0,0.3);
+}
+
+/* MOBILE DESIGN */
+@media(max-width: 600px) {
+
+    .workout-container {
+        overflow-x: auto;
+        padding: 20px;
+    }
+
+    .card {
+        min-width: 130px;
+    }
+}
+
+/* ANIMATION */
+@keyframes fadeDown {
+    from {opacity: 0; transform: translateY(-30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+/* EXERCISE PAGE DESIGN */
+
+.exercise-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.exercise-card {
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.exercise-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.exercise-card h3 {
+    padding: 15px;
+    text-align: center;
+    color: #ffcc00;
+}
+
+.exercise-card p {
+    padding: 0 15px 20px;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.exercise-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.back-btn {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.card-image {
+    width: 120px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 8px 0;
+}
+
+.back-btn a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.back-btn a:hover {
+    transform: scale(1.1);
+}
